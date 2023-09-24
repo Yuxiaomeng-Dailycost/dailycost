@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./src/bin/www"
+    "start": "node ./src/bin/www",
+    "test": "jest --collect-coverage ./test/*.spec.js"
   },
   "prisma": {
     "seed": "node prisma/seed.js"
@@ -17,5 +18,11 @@
     "jade": "~1.11.0",
     "morgan": "~1.9.1",
     "prisma": "^5.3.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-mock-extended": "^3.0.5",
+    "sinon-express-mock": "^2.2.1",
+    "supertest": "^6.3.3"
   }
 }

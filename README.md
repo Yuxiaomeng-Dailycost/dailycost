@@ -62,3 +62,14 @@ https://www.prisma.io/docs/guides/migrate/seed-database
 3. create seed.js and update the data you want
 4. npx prisma generate
 5. npx prisma migrate dev --name init
+
+### run app
+
+DEBUG=dailycost:\* npm start
+
+### Unit test
+
+Jest and supertest
+
+https://rrawat.com/blog/unit-test-express-api
+https://medium.com/@csalazar94/javascript-testing-made-easy-a-step-by-step-guide-with-jest-and-supertest-8e2a35f13506

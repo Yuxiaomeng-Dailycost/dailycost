@@ -1,15 +1,16 @@
-const UserService = require("../services/userService");
+const UserService = require("../services/user.service");
 
 const UserController = {
   login: async (req, res) => {
-    var result = await UserService.login(req.body);
+    var result = await UserService.findByEmailAndPassword(req.body);
+    // result = req.body;
     if (result == null) {
-      res.send({
+      res.json({
         code: -1,
         error: "invalid username or password",
       });
     } else {
-      res.send({
+      return res.json({
         code: 1,
       });
     }
